@@ -1,0 +1,19 @@
+ {
+  "name": "Extension Cord",
+  "description": "Install extensions from the Google Chrome Webstore.",
+  "version": "1.0",
+  "permissions": [ 
+    "activeTab"
+  ],
+  "content_scripts" : [
+    { 
+      "matches": ["https://chrome.google.com/webstore/detail/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "browser_action" : {
+    	"default_icon": "ExtCord.png",
+	"default_title": "Extension Cord"
+  },
+  "manifest_version": 2
+}
